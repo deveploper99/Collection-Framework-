@@ -1,6 +1,7 @@
 package org.rtxrassel;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.ListIterator;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -38,10 +39,45 @@ public class Main {
 
         //arraylistIterator();
 
-        iterator();
+        //iterator();
+
+        listIterator();
 
 
     }
+
+    private static void listIterator(){
+        ArrayList<String> names = new ArrayList<>();
+        names.add("Rassel Hassan");
+        names.add("Hassan");
+        names.add("Akbar Khan");
+        names.add("monika");
+        names.add("liya");
+        names.add("Siam");
+        names.add("Habibi");
+
+        ListIterator<String> iyhg = names.listIterator();
+        while (iyhg.hasNext()){
+            String name1 = iyhg.next();
+            int index = iyhg.previousIndex();
+            if (name1.equals("liya")){
+
+                //
+                System.out.println("======"+index);
+                iyhg.set("Lija");
+
+            }
+        }
+
+        for(String s : names){
+            System.out.println(s);
+        }
+
+//        while (iyhg.hasPrevious()){
+//            System.out.println(iyhg.previous());
+//        }
+    }
+
 
 
     private static void iterator(){
